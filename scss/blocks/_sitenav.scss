@@ -1,0 +1,107 @@
+
+.sitenav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+.sitenav__logo {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.sitenav__logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.sitenav__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.sitenav__item {
+  margin: 0 5px;
+}
+.sitenav__link {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.sitenav__link:active,
+.sitenav__link:hover{
+  color: #111;
+  background: #fff;
+}
+nav i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.menu-btn {
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  .menu-btn {
+    display: block;
+  }
+  #btn {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .sitenav__list {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ .sitenav__list {
+    left: 0;
+  }
+ .sitenav__item {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .sitenav__link {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}

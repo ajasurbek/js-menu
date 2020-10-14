@@ -1,0 +1,17 @@
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sitenav__item {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid blue;
+}
+/*# sourceMappingURL=sitenav.css.map */
